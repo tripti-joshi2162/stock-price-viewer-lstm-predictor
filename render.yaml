@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: health-check-api
+    env: python
+    buildCommand: pip install -r health-check-api/requirements.txt
+    startCommand: uvicorn health:app --host 0.0.0.0 --port 10000
+    plan: free
